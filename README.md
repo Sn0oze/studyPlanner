@@ -1,0 +1,2 @@
+# studyPlanner
+Better study planner
