@@ -1,0 +1,14 @@
+$background-color: #ff9800;
+//#1b5872
+:host{
+  display: block;
+}
+
+.status-bar-container{
+  background-color: $background-color;
+}
+
+.status-bar-content{
+  height: 1.5rem;
+}
+

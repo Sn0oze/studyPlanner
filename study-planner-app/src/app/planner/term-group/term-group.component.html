@@ -1,0 +1,22 @@
+<div class="p-1 mb-3 p-2 bg-accent rounded">
+  <h1>{{group.year}}</h1>
+  <mat-expansion-panel class="mt-2" *ngFor="let term of group.terms" [expanded]="term.order >= currentTerm">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Term {{term.order}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div
+      class="course-list"
+      cdkDropList
+      [cdkDropListDisabled]="term.order <= currentTerm"
+      [cdkDropListEnterPredicate]="canDrop"
+      (cdkDropListDropped)="drop($event)"
+      [cdkDropListData]="term.courses">
+      <div class="course-item" *ngFor="let course of term.courses" cdkDrag>
+        <strong>{{course.id}}</strong>
+        <span class="ml-2">{{course.name}}</span>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</div>
