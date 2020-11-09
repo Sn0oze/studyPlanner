@@ -1,24 +1,20 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Course, Year} from '../../shared/models';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {Course} from '../../../shared/models';
 import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
-  selector: 'app-term-group',
-  templateUrl: './term-group.component.html',
-  styleUrls: ['./term-group.component.scss']
+  selector: 'app-course-list-view',
+  templateUrl: './course-list-view.component.html',
+  styleUrls: ['./course-list-view.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TermGroupComponent implements OnInit {
-  @Input() group: Year;
-  @Input() currentTerm: number;
-  listMode = true;
+export class CourseListViewComponent implements OnInit {
+  @Input() courses: Course[];
+  @Input() dropDisabled: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  toggleMode(): void {
-    this.listMode = !this.listMode;
   }
 
   drop(event: CdkDragDrop<Course[]>): void {

@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
-import {Course, Term, Year} from '../shared/models';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {Course, Year} from '../shared/models';
 
 @Component({
   selector: 'app-planner',
   templateUrl: './planner.component.html',
-  styleUrls: ['./planner.component.scss']
+  styleUrls: ['./planner.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PlannerComponent implements OnInit {
   studyPlan = plan;
@@ -14,21 +14,6 @@ export class PlannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {}
-
-  drop(event: CdkDragDrop<Course[]>): void {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      transferArrayItem(event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex);
-    }
-  }
-
-  isCompleted(term: Term, currentTerm: number): boolean {
-    return term.order <= currentTerm;
-  }
 }
 
 const courses = [

@@ -1,0 +1,12 @@
+<div
+  class="course-list"
+  cdkDropList
+  [cdkDropListDisabled]="dropDisabled"
+  [cdkDropListEnterPredicate]="canDrop"
+  (cdkDropListDropped)="drop($event)"
+  [cdkDropListData]="courses">
+  <div class="course-item" *ngFor="let course of courses" cdkDrag>
+    <strong>{{course.id}}</strong>
+    <span class="ml-2">{{course.name}}</span>
+  </div>
+</div>

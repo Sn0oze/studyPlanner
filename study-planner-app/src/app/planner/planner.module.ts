@@ -9,10 +9,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import {TermGroupComponent} from './term-group/term-group.component';
+import {TermGroupComponent} from './components/term-group/term-group.component';
 import { TermDisplayModePipe } from './pipes/term-display-mode.pipe';
 import { TermDisplayModeHintPipe } from './pipes/term-display-mode-hint.pipe';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { CourseListViewComponent } from './components/course-list-view/course-list-view.component';
+import { CourseCalendarViewComponent } from './components/course-calendar-view/course-calendar-view.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     PlannerComponent,
     TermGroupComponent,
     TermDisplayModePipe,
-    TermDisplayModeHintPipe
+    TermDisplayModeHintPipe,
+    CourseListViewComponent,
+    CourseCalendarViewComponent
   ],
   imports: [
     CommonModule,
