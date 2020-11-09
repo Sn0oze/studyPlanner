@@ -100,12 +100,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .text-label{
   font-size: .75rem;
+  line-height: .85;
   font-weight: normal;
 }
 
 .text-value{
   font-size: 1.25rem;
-  font-weight: bold;
 }
 
 .points-count{
@@ -113,6 +113,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   &:after{
     content: ' ECTS';
     @extend .text-label
+  }
+}
+
+.points-total{
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  &:after{
+    font-weight: normal;
+    content: '/';
   }
 }
 

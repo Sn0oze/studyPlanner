@@ -1,4 +1,4 @@
-<div class="fixed-top">
+<nav class="sticky-top">
   <app-page-header></app-page-header>
   <app-status-bar>
     <div class="d-flex justify-content-end align-items-center">
@@ -6,19 +6,22 @@
       <div class="ml-2">Jan-Eric Raab</div>
     </div>
   </app-status-bar>
-  <div class="bg-white">
-    <div class="container" style="top: 132px; height: 50px">
-      <div class="col">other stiff</div>
+  <div class="bg-white py-2">
+    <div class="container">
+      <div>
+        <span class="points-total">75</span>
+        <span class="points-count">120</span>
+      </div>
     </div>
   </div>
-</div>
-<div class="container" style="margin-top: 182px;" cdkDropListGroup>
+</nav>
+<div class="container" cdkDropListGroup>
   <div class="row">
     <div class="col-md-7 pt-1 mt-2">
       <app-term-group *ngFor="let group of studyPlan" [group]="group" [currentTerm]="currentTerm"></app-term-group>
     </div>
     <div class="col-md-5">
-      <div class="position-sticky" style="top: 182px">
+      <div class="position-sticky" style="top: 186px">
         <div class="pt-1">
           <h1>Bookmarks</h1>
           <app-course-list-view [courses]="courses"></app-course-list-view>
