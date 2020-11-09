@@ -10,10 +10,15 @@ import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem} f
 export class TermGroupComponent implements OnInit {
   @Input() group: Year;
   @Input() currentTerm: number;
+  listMode = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleMode(): void {
+    this.listMode = !this.listMode;
   }
 
   drop(event: CdkDragDrop<Course[]>): void {

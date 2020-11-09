@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import {Course, Term, Year} from '../shared/models';
 
 @Component({
@@ -24,10 +24,6 @@ export class PlannerComponent implements OnInit {
         event.previousIndex,
         event.currentIndex);
     }
-  }
-
-  canDrop(drag: CdkDrag<Course>, drop: CdkDropList<Course[]>): boolean {
-    return !drop.disabled;
   }
 
   isCompleted(term: Term, currentTerm: number): boolean {
