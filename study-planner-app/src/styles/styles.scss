@@ -57,6 +57,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background: white;
   border-radius: 4px;
   overflow: hidden;
+  &:empty{
+    border: 4px dotted rgba(0,0,0,.87);
+    position: relative;
+    border-radius: 0;
+    &:after{
+      content: 'Drop course to add';
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 .course-item {
