@@ -1,4 +1,4 @@
-<div class="p-1 mb-3 p-2 bg-accent rounded">
+<div class="p-1 mb-3 p-2 rounded group-card" [ngClass]="{'active' : group | activeYear: currentTerm}">
   <h1>{{group.year}}</h1>
   <mat-expansion-panel class="mt-2" *ngFor="let term of group.terms" [expanded]="term.order >= currentTerm">
     <mat-expansion-panel-header [expandedHeight]="'2.25rem'" [collapsedHeight]="'2.25rem'">
