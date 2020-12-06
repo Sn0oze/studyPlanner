@@ -15,7 +15,7 @@ export class PlannerService {
   }
 
   public getStudyPlan(): Observable<Year[]> {
-    return of(plan).pipe(delay(2000));
+    return of(plan).pipe(delay(1500));
   }
 }
 
