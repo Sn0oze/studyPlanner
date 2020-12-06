@@ -70,7 +70,7 @@ const plan = [
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 10
           },
           {
             id: '02215',
@@ -109,14 +109,14 @@ const plan = [
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 10
           },
           {
             id: '02215',
@@ -157,7 +157,7 @@ const plan = [
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 10
           }
         ]
       }
@@ -182,14 +182,14 @@ const plan = [
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 7.5
           },
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 10
           },
           {
             id: '02215',
@@ -216,7 +216,7 @@ const plan = [
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 10
           },
           {
             id: '02215',
