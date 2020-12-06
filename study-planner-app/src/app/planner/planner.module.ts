@@ -15,6 +15,7 @@ import { TermDisplayModeHintPipe } from './pipes/term-display-mode-hint.pipe';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { CourseListViewComponent } from './components/course-list-view/course-list-view.component';
 import { CourseCalendarViewComponent } from './components/course-calendar-view/course-calendar-view.component';
+import { ActiveYearPipe } from './pipes/active-year.pipe';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CourseCalendarViewComponent } from './components/course-calendar-view/c
     TermDisplayModePipe,
     TermDisplayModeHintPipe,
     CourseListViewComponent,
-    CourseCalendarViewComponent
+    CourseCalendarViewComponent,
+    ActiveYearPipe
   ],
   imports: [
     CommonModule,
