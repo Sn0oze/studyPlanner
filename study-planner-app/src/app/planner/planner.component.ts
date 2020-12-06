@@ -224,6 +224,16 @@ const plan = [
         ]
       }
     ]
+  },
+  {
+    year: 2021,
+    terms: [
+      {
+        order: 6,
+        placement: 'Spring',
+        courses: []
+      }
+    ]
   }
 ] as Year[];
 
