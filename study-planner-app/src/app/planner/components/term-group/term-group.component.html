@@ -11,7 +11,7 @@
       <mat-panel-description>{{term.placement}}</mat-panel-description>
     </mat-expansion-panel-header>
     <div class="d-flex align-items-center justify-content-between mb-1">
-      <span class="points-count font-weight-bold">30</span>
+      <span class="points-count font-weight-bold">{{group | pointTotal: term.order}}</span>
       <button
         mat-icon-button
         [matTooltip]="listMode | termDisplayModeHint"
