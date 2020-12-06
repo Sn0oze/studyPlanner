@@ -21,25 +21,29 @@ const courses = [
     id: '02535',
     name: 'Database systems',
     placement: 'F4',
-    category: 'elective'
+    category: 'elective',
+    points: 5
   },
   {
     id: '06533',
     name: 'Database systems',
     placement: 'F4',
-    category: 'elective'
+    category: 'elective',
+    points: 10
   },
   {
     id: '02215',
     name: 'Database systems',
     placement: 'F4',
-    category: 'elective'
+    category: 'elective',
+    points: 5
   },
   {
     id: '02215',
     name: 'Database systems',
     placement: 'F4',
-    category: 'elective'
+    category: 'elective',
+    points: 7.5
   }
 ] as Course[];
 
@@ -55,25 +59,29 @@ const plan = [
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective'
+            category: 'elective',
+            points: 5
           },
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective'
+            category: 'elective',
+            points: 5
           },
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective'
+            category: 'elective',
+            points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective'
+            category: 'elective',
+            points: 5
           }
         ]
       }
@@ -132,7 +140,7 @@ const plan = [
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 10
           },
           {
             id: '02215',
@@ -212,7 +220,7 @@ const plan = [
             name: 'Database systems',
             placement: 'F4',
             category: 'elective',
-            points: 5
+            points: 10
           },
           {
             id: '02235',

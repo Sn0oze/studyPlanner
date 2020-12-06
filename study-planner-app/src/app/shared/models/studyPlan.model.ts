@@ -3,6 +3,7 @@ export interface Course {
   name: string;
   placement: string;
   category: string;
+  points: number;
 }
 
 export interface Term   {
