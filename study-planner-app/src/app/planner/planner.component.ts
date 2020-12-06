@@ -1,5 +1,8 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Course, Year} from '../shared/models';
+import {PlannerService} from '../shared/services/planner.service';
+import {Observable} from 'rxjs';
+
 
 @Component({
   selector: 'app-planner',
@@ -8,241 +11,18 @@ import {Course, Year} from '../shared/models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PlannerComponent implements OnInit {
-  studyPlan = plan;
-  courses = courses;
-  currentTerm = 3;
-  constructor() { }
+  public studyPlan: Observable<Year[]>;
+  public bookmarks: Observable<Course[]>;
+  public currentTerm = 3;
 
-  ngOnInit(): void {}
+  constructor(
+    private planner: PlannerService
+  ) { }
+
+  public ngOnInit(): void {
+    this.studyPlan = this.planner.getStudyPlan();
+    this.bookmarks = this.planner.getBookmarks();
+  }
 }
-
-const courses = [
-  {
-    id: '02535',
-    name: 'Database systems',
-    placement: 'F4',
-    category: 'elective',
-    points: 5
-  },
-  {
-    id: '06533',
-    name: 'Database systems',
-    placement: 'F4',
-    category: 'elective',
-    points: 10
-  },
-  {
-    id: '02215',
-    name: 'Database systems',
-    placement: 'F4',
-    category: 'elective',
-    points: 5
-  },
-  {
-    id: '02215',
-    name: 'Database systems',
-    placement: 'F4',
-    category: 'elective',
-    points: 7.5
-  }
-] as Course[];
-
-const plan = [
-  {
-    year: 2018,
-    terms: [
-      {
-        order: 1,
-        placement: 'Fall',
-        courses: [
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 10
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          }
-        ]
-      }
-    ]
-  },
-  {
-    year: 2019,
-    terms: [
-      {
-        order: 2,
-        placement: 'Spring',
-        courses: [
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          }
-        ]
-      },
-      {
-        order: 3,
-        placement: 'Fall',
-        courses: [
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 10
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          }
-        ]
-      }
-    ]
-  },
-  {
-    year: 2020,
-    terms: [
-      {
-        order: 4,
-        placement: 'Spring',
-        courses: [
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          }
-        ]
-      },
-      {
-        order: 5,
-        placement: 'Fall',
-        courses: [
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 10
-          },
-          {
-            id: '02235',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 5
-          }
-        ]
-      }
-    ]
-  },
-  {
-    year: 2021,
-    terms: [
-      {
-        order: 6,
-        placement: 'Spring',
-        courses: []
-      }
-    ]
-  }
-] as Year[];
 
 

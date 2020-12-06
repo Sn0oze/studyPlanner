@@ -18,13 +18,13 @@
 <div class="container" cdkDropListGroup>
   <div class="row">
     <div class="col-md-7 pt-1 mt-2">
-      <app-term-group *ngFor="let group of studyPlan" [group]="group" [currentTerm]="currentTerm"></app-term-group>
+      <app-term-group *ngFor="let group of studyPlan | async" [group]="group" [currentTerm]="currentTerm"></app-term-group>
     </div>
     <div class="col-md-5">
       <div class="position-sticky" style="top: 186px">
         <div class="pt-1">
           <h1>Bookmarks</h1>
-          <app-course-list-view [courses]="courses"></app-course-list-view>
+          <app-course-list-view [courses]="bookmarks | async"></app-course-list-view>
         </div>
       </div>
     </div>
