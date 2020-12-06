@@ -17,7 +17,7 @@ export class CourseListViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  drop(event: CdkDragDrop<Course[]>): void {
+  public drop(event: CdkDragDrop<Course[]>): void {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

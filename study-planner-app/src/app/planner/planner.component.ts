@@ -19,7 +19,7 @@ export class PlannerComponent implements OnInit {
     private planner: PlannerService
   ) { }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.studyPlan = this.planner.getStudyPlan();
     this.bookmarks = this.planner.getBookmarks();
   }

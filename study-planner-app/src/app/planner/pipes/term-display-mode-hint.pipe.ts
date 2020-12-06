@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TermDisplayModeHintPipe implements PipeTransform {
 
-  transform(listMode: boolean): string {
+  public transform(listMode: boolean): string {
     return listMode ? 'Show as Calendar' : 'Show as list';
   }
 }

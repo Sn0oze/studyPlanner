@@ -10,14 +10,14 @@ import {Year} from '../../../shared/models';
 export class TermGroupComponent implements OnInit {
   @Input() group: Year;
   @Input() currentTerm: number;
-  listMode = true;
+  public listMode = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleMode(): void {
+  public toggleMode(): void {
     this.listMode = !this.listMode;
   }
 }

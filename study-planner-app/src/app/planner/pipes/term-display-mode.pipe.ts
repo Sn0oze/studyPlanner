@@ -5,7 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   pure: true
 })
 export class TermDisplayModePipe implements PipeTransform {
-  transform(listMode: boolean): string {
+
+  public transform(listMode: boolean): string {
     return listMode ? 'view_module' : 'view_list';
   }
 }

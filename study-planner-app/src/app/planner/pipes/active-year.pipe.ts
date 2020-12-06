@@ -7,7 +7,7 @@ import {Year} from '../../shared/models';
 })
 export class ActiveYearPipe implements PipeTransform {
 
-  transform(year: Year, currentTerm): boolean {
+  public transform(year: Year, currentTerm): boolean {
     return year.terms.some(term => term.order === currentTerm);
   }
 }
