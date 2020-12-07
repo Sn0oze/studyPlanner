@@ -18,7 +18,7 @@
 <div class="container" cdkDropListGroup>
   <div class="row">
     <div class="col-md-7 pt-1 mt-2">
-      <app-term-group *ngFor="let group of studyPlan | async" [group]="group" [currentTerm]="currentTerm"></app-term-group>
+      <app-term-group *ngFor="let group of studyPlan | async" [year]="group" [currentTerm]="currentTerm"></app-term-group>
     </div>
     <div class="col-md-5">
       <div class="position-sticky" style="top: 186px">

@@ -9,7 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import {TermGroupComponent} from './components/term-group/term-group.component';
+import {AcademicYearComponent} from './components/academic-year/academic-year.component';
 import {TermDisplayModePipe} from './pipes/term-display-mode.pipe';
 import {TermDisplayModeHintPipe} from './pipes/term-display-mode-hint.pipe';
 import {MatTooltipModule} from '@angular/material/tooltip';
@@ -22,7 +22,7 @@ import {PointTotalPipe} from './pipes/point-total.pipe';
 @NgModule({
   declarations: [
     PlannerComponent,
-    TermGroupComponent,
+    AcademicYearComponent,
     TermDisplayModePipe,
     TermDisplayModeHintPipe,
     CourseListViewComponent,

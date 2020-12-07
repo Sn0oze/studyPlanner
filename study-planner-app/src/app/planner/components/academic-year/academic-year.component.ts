@@ -3,12 +3,12 @@ import {AcademicYear} from '../../../shared/models';
 
 @Component({
   selector: 'app-term-group',
-  templateUrl: './term-group.component.html',
-  styleUrls: ['./term-group.component.scss'],
+  templateUrl: './academic-year.component.html',
+  styleUrls: ['./academic-year.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TermGroupComponent implements OnInit {
-  @Input() group: AcademicYear;
+export class AcademicYearComponent implements OnInit {
+  @Input() year: AcademicYear;
   @Input() currentTerm: number;
   public listMode = true;
 

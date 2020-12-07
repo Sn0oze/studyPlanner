@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TermGroupComponent } from './term-group.component';
+import { AcademicYearComponent } from './academic-year.component';
 
-describe('TermGroupComponent', () => {
-  let component: TermGroupComponent;
-  let fixture: ComponentFixture<TermGroupComponent>;
+describe('AcademicYearComponent', () => {
+  let component: AcademicYearComponent;
+  let fixture: ComponentFixture<AcademicYearComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TermGroupComponent ]
+      declarations: [ AcademicYearComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TermGroupComponent);
+    fixture = TestBed.createComponent(AcademicYearComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

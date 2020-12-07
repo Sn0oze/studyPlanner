@@ -1,6 +1,6 @@
-<div class="p-1 mb-3 p-2 rounded group-card" [ngClass]="{'active' : group | activeYear: currentTerm}">
-  <h1>{{group.year}}</h1>
-  <mat-expansion-panel class="mt-2" *ngFor="let term of group.terms" [expanded]="term.order >= currentTerm">
+<div class="p-1 mb-3 p-2 rounded group-card" [ngClass]="{'active' : year | activeYear: currentTerm}">
+  <h1>{{year.year}}</h1>
+  <mat-expansion-panel class="mt-2" *ngFor="let term of year.terms" [expanded]="term.order >= currentTerm">
     <mat-expansion-panel-header [expandedHeight]="'2.25rem'" [collapsedHeight]="'2.25rem'">
       <mat-panel-title class="d-flex align-items-end">
         <div class="d-flex align-items-end">
@@ -11,7 +11,7 @@
       <mat-panel-description>{{term.placement}}</mat-panel-description>
     </mat-expansion-panel-header>
     <div class="d-flex align-items-center justify-content-between mb-1">
-      <span class="points-count font-weight-bold">{{group | pointTotal: term.order}}</span>
+      <span class="points-count font-weight-bold">{{year | pointTotal: term.order}}</span>
       <button
         mat-icon-button
         [matTooltip]="listMode | termDisplayModeHint"
