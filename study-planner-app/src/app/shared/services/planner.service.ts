@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Course, Year} from '../models';
+import {Course, AcademicYear} from '../models';
 import {Observable, of} from 'rxjs';
 import {delay} from 'rxjs/operators';
 
@@ -14,7 +14,7 @@ export class PlannerService {
     return of(courses).pipe(delay(2000));
   }
 
-  public getStudyPlan(): Observable<Year[]> {
+  public getStudyPlan(): Observable<AcademicYear[]> {
     return of(plan).pipe(delay(1500));
   }
 }
@@ -246,4 +246,4 @@ const plan = [
       }
     ]
   }
-] as Year[];
+] as AcademicYear[];

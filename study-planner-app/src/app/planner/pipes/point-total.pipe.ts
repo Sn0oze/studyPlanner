@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Course, Year} from '../../shared/models';
+import {Course, AcademicYear} from '../../shared/models';
 
 @Pipe({
   name: 'pointTotal',
@@ -9,7 +9,7 @@ export class PointTotalPipe implements PipeTransform {
 
   private pointsAccumulator = (sum: number, course: Course) => sum + course.points;
 
-  public transform(year: Year, order?: number): number {
+  public transform(year: AcademicYear, order?: number): number {
     if (order) {
       const courses = year.terms.find(term => term.order === order)?.courses || [];
       return courses.reduce(this.pointsAccumulator, 0);

@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Course, Year} from '../shared/models';
+import {Course, AcademicYear} from '../shared/models';
 import {PlannerService} from '../shared/services/planner.service';
 import {Observable} from 'rxjs';
 
@@ -11,7 +11,7 @@ import {Observable} from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PlannerComponent implements OnInit {
-  public studyPlan: Observable<Year[]>;
+  public studyPlan: Observable<AcademicYear[]>;
   public bookmarks: Observable<Course[]>;
   public currentTerm = 3;
 

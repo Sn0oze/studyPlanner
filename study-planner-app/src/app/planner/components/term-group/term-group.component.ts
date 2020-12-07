@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {Year} from '../../../shared/models';
+import {AcademicYear} from '../../../shared/models';
 
 @Component({
   selector: 'app-term-group',
@@ -8,7 +8,7 @@ import {Year} from '../../../shared/models';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TermGroupComponent implements OnInit {
-  @Input() group: Year;
+  @Input() group: AcademicYear;
   @Input() currentTerm: number;
   public listMode = true;
 

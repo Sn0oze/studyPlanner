@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Year} from '../../shared/models';
+import {AcademicYear} from '../../shared/models';
 
 @Pipe({
   name: 'activeYear',
@@ -7,7 +7,7 @@ import {Year} from '../../shared/models';
 })
 export class ActiveYearPipe implements PipeTransform {
 
-  public transform(year: Year, currentTerm): boolean {
+  public transform(year: AcademicYear, currentTerm): boolean {
     return year.terms.some(term => term.order === currentTerm);
   }
 }
