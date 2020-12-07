@@ -1,4 +1,4 @@
-export type Category = 'Thesis' | 'General Competence' | 'Technological Specialisation' |'Elective';
+export type Category = 'thesis' | 'general competence' | 'technological Specialisation' |'elective';
 
 export interface Course {
   id: string;
@@ -14,7 +14,7 @@ export interface Term   {
   courses: Course[];
 }
 
-export interface Year {
+export interface AcademicYear {
   year: number;
   terms: Term[];
 }
