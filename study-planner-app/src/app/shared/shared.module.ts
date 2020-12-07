@@ -18,7 +18,8 @@ import { CategoryColorPipe } from './pipes/category-color.pipe';
   exports: [
     PageHeaderComponent,
     StatusBarComponent,
-    ChartsModule
+    ChartsModule,
+    CategoryColorPipe
   ]
 })
 export class SharedModule {
