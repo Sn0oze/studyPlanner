@@ -24,21 +24,21 @@ const courses = [
     id: '02535',
     name: 'Database systems',
     placement: 'F4',
-    category: 'technological specialisation',
+    category: 'technological_specialisation',
     points: 5
   },
   {
     id: '06533',
     name: 'Database systems',
     placement: 'F4',
-    category: 'general competence',
+    category: 'general_competence',
     points: 10
   },
   {
     id: '02215',
     name: 'Database systems',
     placement: 'F4',
-    category: 'technological specialisation',
+    category: 'technological_specialisation',
     points: 5
   },
   {
