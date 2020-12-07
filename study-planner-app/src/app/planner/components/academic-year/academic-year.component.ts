@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {AcademicYear} from '../../../shared/models';
 
 @Component({
-  selector: 'app-term-group',
+  selector: 'app-academic-year',
   templateUrl: './academic-year.component.html',
   styleUrls: ['./academic-year.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
