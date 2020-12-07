@@ -6,6 +6,10 @@
   (cdkDropListDropped)="drop($event)"
   [cdkDropListData]="courses">
   <div class="course-item" *ngFor="let course of courses" cdkDrag>
+    <span
+      class="category-marker"
+      [style.border-top-color]="course.category | categoryColor"
+      [style.border-left-color]="course.category | categoryColor"></span>
     <strong>{{course.id}}</strong>
     <span class="ml-2">{{course.name}}</span>
   </div>
