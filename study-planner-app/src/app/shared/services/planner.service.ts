@@ -24,21 +24,21 @@ const courses = [
     id: '02535',
     name: 'Database systems',
     placement: 'F4',
-    category: 'elective',
+    category: 'technological specialisation',
     points: 5
   },
   {
     id: '06533',
     name: 'Database systems',
     placement: 'F4',
-    category: 'elective',
+    category: 'general competence',
     points: 10
   },
   {
     id: '02215',
     name: 'Database systems',
     placement: 'F4',
-    category: 'elective',
+    category: 'technological specialisation',
     points: 5
   },
   {
@@ -56,7 +56,7 @@ const plan = [
     terms: [
       {
         order: 1,
-        placement: 'Fall',
+        placement: 'fall',
         courses: [
           {
             id: '02215',
@@ -69,14 +69,14 @@ const plan = [
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'technological_specialisation',
             points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'technological_specialisation',
             points: 10
           },
           {
@@ -95,7 +95,7 @@ const plan = [
     terms: [
       {
         order: 2,
-        placement: 'Spring',
+        placement: 'spring',
         courses: [
           {
             id: '02215',
@@ -108,14 +108,14 @@ const plan = [
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'technological_specialisation',
             points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'general_competence',
             points: 10
           },
           {
@@ -129,20 +129,20 @@ const plan = [
       },
       {
         order: 3,
-        placement: 'Fall',
+        placement: 'fall',
         courses: [
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'technological_specialisation',
             points: 5
           },
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'general_competence',
             points: 10
           },
           {
@@ -156,7 +156,7 @@ const plan = [
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'technological_specialisation',
             points: 10
           }
         ]
@@ -168,13 +168,13 @@ const plan = [
     terms: [
       {
         order: 4,
-        placement: 'Spring',
+        placement: 'spring',
         courses: [
           {
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'general_competence',
             points: 5
           },
           {
@@ -195,41 +195,20 @@ const plan = [
             id: '02215',
             name: 'Database systems',
             placement: 'F4',
-            category: 'elective',
+            category: 'general_competence',
             points: 5
           }
         ]
       },
       {
         order: 5,
-        placement: 'Fall',
+        placement: 'fall',
         courses: [
           {
             id: '02215',
-            name: 'Database systems',
+            name: 'Thesis',
             placement: 'F4',
-            category: 'elective',
-            points: 5
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 10
-          },
-          {
-            id: '02215',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
-            points: 10
-          },
-          {
-            id: '02235',
-            name: 'Database systems',
-            placement: 'F4',
-            category: 'elective',
+            category: 'thesis',
             points: 5
           }
         ]
@@ -241,7 +220,7 @@ const plan = [
     terms: [
       {
         order: 6,
-        placement: 'Spring',
+        placement: 'spring',
         courses: []
       }
     ]

@@ -1,4 +1,4 @@
-export type Category = 'thesis' | 'general competence' | 'technological Specialisation' |'elective';
+export type Category = 'thesis' | 'general_competence' | 'technological_specialisation' |'elective';
 
 export type TermPlacement = 'spring' | 'fall';
 
