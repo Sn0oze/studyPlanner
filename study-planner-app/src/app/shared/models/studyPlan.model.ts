@@ -1,18 +1,18 @@
 export type Category = 'thesis' | 'general competence' | 'technological Specialisation' |'elective';
 
-export type Placement = 'spring' | 'fall';
+export type TermPlacement = 'spring' | 'fall';
 
 export interface Course {
   id: string;
   name: string;
-  placement: Placement;
+  placement: string;
   category: Category;
   points: number;
 }
 
 export interface Term {
   order: number;
-  placement: string;
+  placement: TermPlacement;
   courses: Course[];
 }
 
