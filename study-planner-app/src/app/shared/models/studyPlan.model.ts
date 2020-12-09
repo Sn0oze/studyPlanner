@@ -20,3 +20,11 @@ export interface AcademicYear {
   year: number;
   terms: Term[];
 }
+
+export function instanceOfAcademicYear(object: any): object is AcademicYear {
+  return 'terms' in object;
+}
+
+export function instanceOfTerm(object: any): object is Term {
+  return 'courses' in object;
+}
