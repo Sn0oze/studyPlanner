@@ -94,25 +94,25 @@ $course-item-height: 40px;
   &:not(.cdk-drag-disabled) {
     cursor: move;
   }
-  &:first-child{
-    &.category-marker{
-      border-radius: 4px 0 0 0;
+  &:last-child{
+    .category-marker{
+      height: $course-item-height;
     }
   }
 }
 
 .category-marker{
   display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 20px;
-  border-color: #313131 transparent transparent #313131;
+  width: 6px;
+  height: calc(#{$course-item-height} - 1px);
+  background-color: #313131;
+  margin-right: .25rem;
 }
 
 .cdk-drag-preview {
   .category-marker {
-    border-radius: 4px 0 0 0;
+    border-radius: 4px 0 0 4px;
+    height: $course-item-height;
   }
   box-sizing: border-box;
   border-radius: 4px;
