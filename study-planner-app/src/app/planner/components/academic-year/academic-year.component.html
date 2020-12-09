@@ -1,5 +1,8 @@
 <div class="p-1 mb-3 p-2 rounded group-card" [ngClass]="{'active' : year | activeYear: currentTerm}">
-  <h1>{{year.year}}</h1>
+  <h1 class="d-flex justify-content-between align-items-center">
+    <span>{{year.year}}</span>
+    <span class="points-count font-weight-bold">{{year | pointTotal}}</span>
+  </h1>
   <app-term
     *ngFor="let term of year.terms"
     [term]="term"
