@@ -1,10 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {Term} from '../../../shared/models';
 
 @Component({
   selector: 'app-term',
   templateUrl: './term.component.html',
-  styleUrls: ['./term.component.scss']
+  styleUrls: ['./term.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TermComponent implements OnInit {
   @Input() term: Term;
