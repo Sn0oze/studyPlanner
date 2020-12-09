@@ -1,4 +1,8 @@
 <div class="p-1 mb-3 p-2 rounded group-card" [ngClass]="{'active' : year | activeYear: currentTerm}">
   <h1>{{year.year}}</h1>
-  <app-term *ngFor="let term of year.terms" [term]="term" [isLocked]="term.order <= currentTerm"></app-term>
+  <app-term
+    *ngFor="let term of year.terms"
+    [term]="term"
+    [isCurrent]="term.order === currentTerm"
+    [isLocked]="term.order <= currentTerm"></app-term>
 </div>

@@ -8,6 +8,7 @@ import {Term} from '../../../shared/models';
 })
 export class TermComponent implements OnInit {
   @Input() term: Term;
+  @Input() isCurrent = false;
   @Input() isLocked = true;
   public listMode = true;
 
