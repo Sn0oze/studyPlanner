@@ -11,6 +11,7 @@ import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem} f
 export class CourseListViewComponent implements OnInit {
   @Input() courses: Course[];
   @Input() dropDisabled: boolean;
+  public canDrop = (drag: CdkDrag<Course>, drop: CdkDropList<Course[]>): boolean => !drop.disabled;
 
   constructor() { }
 
@@ -26,9 +27,5 @@ export class CourseListViewComponent implements OnInit {
         event.previousIndex,
         event.currentIndex);
     }
-  }
-
-  canDrop(drag: CdkDrag<Course>, drop: CdkDropList<Course[]>): boolean {
-    return !drop.disabled;
   }
 }
