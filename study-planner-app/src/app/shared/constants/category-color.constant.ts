@@ -1,8 +1,8 @@
 export enum CategoryColors {
-  THESIS = '#fae161',
-  GENERAL_COMPETENCES = '#ff6b6b',
-  TECHNOLOGICAL_SPECIALISATION = '#ae2cff',
-  ELECTIVE = '#5384ff'
+  THESIS = '#f3993e',
+  GENERAL_COMPETENCES = '#e83f48',
+  TECHNOLOGICAL_SPECIALISATION = '#792d8e',
+  ELECTIVE = '#3042ea'
 }
 
 export const CategoryColorMap = {
