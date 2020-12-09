@@ -1,0 +1,30 @@
+<mat-expansion-panel class="mt-2" [expanded]="!isLocked">
+  <mat-expansion-panel-header [expandedHeight]="'2.25rem'" [collapsedHeight]="'2.25rem'">
+    <mat-panel-title class="d-flex align-items-end">
+      <div class="d-flex align-items-end">
+        <div class="mr-1">Term</div>
+        <div class="font-weight-bold">{{term.order}}</div>
+      </div>
+    </mat-panel-title>
+    <mat-panel-description>{{term.placement}}</mat-panel-description>
+  </mat-expansion-panel-header>
+  <div class="d-flex align-items-center justify-content-between mb-1">
+    <span class="points-count font-weight-bold">{{term | pointTotal}}</span>
+    <button
+      mat-icon-button
+      [matTooltip]="listMode | termDisplayModeHint"
+      [matTooltipShowDelay]="750"
+      (click)="toggleMode()">
+      <mat-icon>{{listMode | termDisplayMode}}</mat-icon>
+    </button>
+  </div>
+  <ng-container *ngIf="listMode; then listView; else calendarView"></ng-container>
+  <ng-template #listView>
+    <app-course-list-view
+      [courses]="term.courses"
+      [dropDisabled]="isLocked"></app-course-list-view>
+  </ng-template>
+  <ng-template #calendarView>
+    <app-course-calendar-view></app-course-calendar-view>
+  </ng-template>
+</mat-expansion-panel>

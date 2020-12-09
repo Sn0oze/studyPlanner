@@ -1,33 +1,4 @@
 <div class="p-1 mb-3 p-2 rounded group-card" [ngClass]="{'active' : year | activeYear: currentTerm}">
   <h1>{{year.year}}</h1>
-  <mat-expansion-panel class="mt-2" *ngFor="let term of year.terms" [expanded]="term.order >= currentTerm">
-    <mat-expansion-panel-header [expandedHeight]="'2.25rem'" [collapsedHeight]="'2.25rem'">
-      <mat-panel-title class="d-flex align-items-end">
-        <div class="d-flex align-items-end">
-          <div class="mr-1">Term</div>
-          <div class="font-weight-bold">{{term.order}}</div>
-        </div>
-      </mat-panel-title>
-      <mat-panel-description>{{term.placement}}</mat-panel-description>
-    </mat-expansion-panel-header>
-    <div class="d-flex align-items-center justify-content-between mb-1">
-      <span class="points-count font-weight-bold">{{year | pointTotal: term.order}}</span>
-      <button
-        mat-icon-button
-        [matTooltip]="listMode | termDisplayModeHint"
-        [matTooltipShowDelay]="750"
-        (click)="toggleMode()">
-        <mat-icon>{{listMode | termDisplayMode}}</mat-icon>
-      </button>
-    </div>
-    <ng-container *ngIf="listMode; then listView; else calendarView"></ng-container>
-    <ng-template #listView>
-      <app-course-list-view
-        [courses]="term.courses"
-        [dropDisabled]="term.order <= currentTerm"></app-course-list-view>
-    </ng-template>
-    <ng-template #calendarView>
-      <app-course-calendar-view></app-course-calendar-view>
-    </ng-template>
-  </mat-expansion-panel>
+  <app-term *ngFor="let term of year.terms" [term]="term" [isLocked]="term.order <= currentTerm"></app-term>
 </div>

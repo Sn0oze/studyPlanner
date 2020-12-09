@@ -18,6 +18,7 @@ import {CourseCalendarViewComponent} from './components/course-calendar-view/cou
 import {ActiveYearPipe} from './pipes/active-year.pipe';
 import {PointTotalPipe} from './pipes/point-total.pipe';
 import {CourseItemComponent} from './components/course-list-view/course-item/course-item.component';
+import { TermComponent } from './components/term/term.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {CourseItemComponent} from './components/course-list-view/course-item/cou
     CourseCalendarViewComponent,
     ActiveYearPipe,
     PointTotalPipe,
-    CourseItemComponent
+    CourseItemComponent,
+    TermComponent
   ],
   imports: [
     CommonModule,

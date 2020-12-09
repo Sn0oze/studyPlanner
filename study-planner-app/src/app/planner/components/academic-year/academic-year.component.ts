@@ -10,14 +10,9 @@ import {AcademicYear} from '../../../shared/models';
 export class AcademicYearComponent implements OnInit {
   @Input() year: AcademicYear;
   @Input() currentTerm: number;
-  public listMode = true;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  public toggleMode(): void {
-    this.listMode = !this.listMode;
   }
 }
