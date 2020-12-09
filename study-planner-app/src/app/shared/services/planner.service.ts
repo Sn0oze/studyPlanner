@@ -209,13 +209,13 @@ const plan = [
             name: 'Thesis',
             module: 'F4',
             category: 'thesis',
-            points: 5
+            points: 32.5
           }
         ]
       }
     ]
   },
-  {
+/*  {
     year: 2021,
     terms: [
       {
@@ -225,4 +225,5 @@ const plan = [
       }
     ]
   }
+ */
 ] as AcademicYear[];
