@@ -5,7 +5,7 @@ export type TermPlacement = 'spring' | 'fall';
 export interface Course {
   id: string;
   name: string;
-  placement: string;
+  module: string;
   category: Category;
   points: number;
 }

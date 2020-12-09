@@ -23,28 +23,28 @@ const courses = [
   {
     id: '02535',
     name: 'Database systems',
-    placement: 'F4',
+    module: 'F4',
     category: 'technological_specialisation',
     points: 5
   },
   {
     id: '06533',
     name: 'Database systems',
-    placement: 'F4',
+    module: 'F4',
     category: 'general_competence',
     points: 10
   },
   {
     id: '02215',
     name: 'Database systems',
-    placement: 'F4',
+    module: 'F4',
     category: 'technological_specialisation',
     points: 5
   },
   {
     id: '02215',
     name: 'Database systems',
-    placement: 'F4',
+    module: 'F4',
     category: 'elective',
     points: 7.5
   }
@@ -61,28 +61,28 @@ const plan = [
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'elective',
             points: 5
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'technological_specialisation',
             points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'technological_specialisation',
             points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'elective',
             points: 5
           }
@@ -100,28 +100,28 @@ const plan = [
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'elective',
             points: 5
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'technological_specialisation',
             points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'general_competence',
             points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'elective',
             points: 5
           }
@@ -134,28 +134,28 @@ const plan = [
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'technological_specialisation',
             points: 5
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'general_competence',
             points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'elective',
             points: 5
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'technological_specialisation',
             points: 10
           }
@@ -173,28 +173,28 @@ const plan = [
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'general_competence',
             points: 5
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'elective',
             points: 7.5
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'elective',
             points: 10
           },
           {
             id: '02215',
             name: 'Database systems',
-            placement: 'F4',
+            module: 'F4',
             category: 'general_competence',
             points: 5
           }
@@ -207,7 +207,7 @@ const plan = [
           {
             id: '02215',
             name: 'Thesis',
-            placement: 'F4',
+            module: 'F4',
             category: 'thesis',
             points: 5
           }
