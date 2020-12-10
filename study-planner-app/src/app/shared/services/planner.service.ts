@@ -23,28 +23,28 @@ const courses = [
   {
     id: '02535',
     name: 'Database systems',
-    module: 'F4',
+    module: '4A',
     category: 'technological_specialisation',
     points: 5
   },
   {
     id: '06533',
     name: 'Database systems',
-    module: 'F4',
+    module: '2B',
     category: 'general_competence',
     points: 10
   },
   {
-    id: '02215',
-    name: 'Database systems',
-    module: 'F4',
+    id: '02345',
+    name: 'Computational Data Analysis',
+    module: '1B',
     category: 'technological_specialisation',
     points: 5
   },
   {
-    id: '02215',
-    name: 'Database systems',
-    module: 'F4',
+    id: '03455',
+    name: 'Algorithms for Massive Datasets',
+    module: '3B',
     category: 'elective',
     points: 7.5
   }
@@ -60,29 +60,29 @@ const plan = [
         courses: [
           {
             id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            name: 'Cognitive Science',
+            module: '2A',
             category: 'elective',
             points: 5
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '02345',
+            name: 'Social graphs',
+            module: '3A',
             category: 'technological_specialisation',
             points: 10
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '02277',
+            name: 'UX Engineering',
+            module: '5B',
             category: 'technological_specialisation',
             points: 10
           },
           {
-            id: '02215',
+            id: '02332',
             name: 'Database systems',
-            module: 'F4',
+            module: '1B',
             category: 'elective',
             points: 5
           }
@@ -98,30 +98,30 @@ const plan = [
         placement: 'spring',
         courses: [
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '04215',
+            name: 'Computational Tools',
+            module: '3A',
             category: 'elective',
             points: 5
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '02225',
+            name: 'Algorithms 1',
+            module: '4A',
             category: 'technological_specialisation',
             points: 10
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '04415',
+            name: 'Discrete Mathematics',
+            module: '3B',
             category: 'general_competence',
             points: 10
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '03915',
+            name: 'Social Data',
+            module: '1A',
             category: 'elective',
             points: 5
           }
@@ -132,30 +132,30 @@ const plan = [
         placement: 'fall',
         courses: [
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '03315',
+            name: 'Algorithms 2',
+            module: '5B',
             category: 'technological_specialisation',
             points: 5
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '01515',
+            name: 'HardTech',
+            module: '4A',
             category: 'general_competence',
             points: 10
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '03715',
+            name: 'Personal Data Interaction',
+            module: '4B',
             category: 'elective',
             points: 5
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '04515',
+            name: 'Rendering',
+            module: '3A',
             category: 'technological_specialisation',
             points: 10
           }
@@ -171,30 +171,37 @@ const plan = [
         placement: 'spring',
         courses: [
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '02212',
+            name: 'Software Engineering',
+            module: '5B',
             category: 'general_competence',
             points: 5
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '04435',
+            name: 'Mobile Development',
+            module: '5B',
+            category: 'elective',
+            points: 5
+          },
+          {
+            id: '03945',
+            name: 'Introduction to Machine Learning',
+            module: '4A',
             category: 'elective',
             points: 7.5
           },
           {
-            id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            id: '02267',
+            name: 'Deep Learning',
+            module: '3A',
             category: 'elective',
             points: 10
           },
           {
             id: '02215',
-            name: 'Database systems',
-            module: 'F4',
+            name: 'Advanced Machine Learning',
+            module: '2A',
             category: 'general_competence',
             points: 5
           }
