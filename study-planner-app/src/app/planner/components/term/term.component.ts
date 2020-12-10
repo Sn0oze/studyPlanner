@@ -15,8 +15,7 @@ export class TermComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public toggleMode(): void {
     this.listMode = !this.listMode;

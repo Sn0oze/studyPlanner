@@ -19,12 +19,16 @@
     </button>
   </div>
   <ng-container *ngIf="listMode; then listView; else calendarView"></ng-container>
-  <ng-template #listView>
-    <app-course-list-view
-      [courses]="term.courses"
-      [dropDisabled]="isLocked"></app-course-list-view>
-  </ng-template>
-  <ng-template #calendarView>
-    <app-course-calendar-view></app-course-calendar-view>
-  </ng-template>
 </mat-expansion-panel>
+
+<ng-template #listView>
+  <app-course-list-view
+    [courses]="term.courses"
+    [dropDisabled]="isLocked"></app-course-list-view>
+</ng-template>
+
+<ng-template #calendarView>
+  <app-course-calendar-view
+    [courses]="term.courses"
+    [placement]="term.placement"></app-course-calendar-view>
+</ng-template>

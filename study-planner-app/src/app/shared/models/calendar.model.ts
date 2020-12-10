@@ -1,5 +1,14 @@
+export interface TimeSegment {
+  hour: string;
+  minutes: string;
+}
+
+export interface TimeSlot {
+  start: TimeSegment;
+  end: TimeSegment;
+}
+
 export interface ModuleRow{
-  start: {hour: string, minutes: string};
-  end: {hour: string, minutes: string};
+  timeSlot: TimeSlot;
   modules: string[];
 }
