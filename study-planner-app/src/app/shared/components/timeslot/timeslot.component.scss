@@ -1,0 +1,12 @@
+:host{
+  display: inline;
+}
+
+.separator{
+  &:before{
+    content: ' ';
+  }
+  &:after{
+    content: ' ';
+  }
+}
