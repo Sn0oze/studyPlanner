@@ -3,9 +3,10 @@ import {CommonModule} from '@angular/common';
 import {StatusBarComponent} from './components/status-bar/status-bar.component';
 import {PageHeaderComponent} from './components/page-header/page-header.component';
 import {ChartsModule} from './components/charts/charts.module';
-import { CategoryColorPipe } from './pipes/category-color.pipe';
-import { TimeDisplayComponent } from './components/time-display/time-display.component';
-import { TimeslotComponent } from './components/timeslot/timeslot.component';
+import {CategoryColorPipe} from './pipes/category-color.pipe';
+import {TimeDisplayComponent} from './components/time-display/time-display.component';
+import {TimeslotComponent} from './components/timeslot/timeslot.component';
+import {ModulePipe} from './pipes/module.pipe';
 
 @NgModule({
   declarations: [
@@ -13,19 +14,20 @@ import { TimeslotComponent } from './components/timeslot/timeslot.component';
     PageHeaderComponent,
     CategoryColorPipe,
     TimeDisplayComponent,
-    TimeslotComponent
+    TimeslotComponent,
+    ModulePipe
   ],
   imports: [
     CommonModule,
     ChartsModule
   ],
-    exports: [
-        PageHeaderComponent,
-        StatusBarComponent,
-        ChartsModule,
-        CategoryColorPipe,
-        TimeslotComponent
-    ]
+  exports: [
+    PageHeaderComponent,
+    StatusBarComponent,
+    ChartsModule,
+    CategoryColorPipe,
+    TimeslotComponent,
+    ModulePipe
+  ]
 })
-export class SharedModule {
-}
+export class SharedModule {}
