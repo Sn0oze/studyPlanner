@@ -7,6 +7,7 @@ import {CategoryColorPipe} from './pipes/category-color.pipe';
 import {TimeDisplayComponent} from './components/time-display/time-display.component';
 import {TimeslotComponent} from './components/timeslot/timeslot.component';
 import {ModulePipe} from './pipes/module.pipe';
+import { ArrayFromPipe } from './pipes/array-from.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {ModulePipe} from './pipes/module.pipe';
     CategoryColorPipe,
     TimeDisplayComponent,
     TimeslotComponent,
-    ModulePipe
+    ModulePipe,
+    ArrayFromPipe
   ],
   imports: [
     CommonModule,
