@@ -8,7 +8,7 @@ export class PlannerContext {
   private  moduleSelection = new BehaviorSubject<string | null>(null);
   constructor() {}
 
-  public getDragSelection(): Observable<Course> {
+  public getDragSelection(): Observable<Course | null> {
     return this.dragSelection.asObservable();
   }
 
@@ -16,7 +16,7 @@ export class PlannerContext {
     this.dragSelection.next(course);
   }
 
-  public getModuleSelection(): Observable<string> {
+  public getModuleSelection(): Observable<string | null> {
     return this.moduleSelection.asObservable();
   }
 
