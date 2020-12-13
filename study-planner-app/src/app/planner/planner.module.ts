@@ -19,6 +19,7 @@ import {ActiveYearPipe} from './pipes/active-year.pipe';
 import {PointTotalPipe} from './pipes/point-total.pipe';
 import {CourseItemComponent} from './components/course-list-view/course-item/course-item.component';
 import {TermComponent} from './components/term/term.component';
+import { InModulePipe } from './pipes/in-module.pipe';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {TermComponent} from './components/term/term.component';
     ActiveYearPipe,
     PointTotalPipe,
     CourseItemComponent,
-    TermComponent
+    TermComponent,
+    InModulePipe
   ],
   imports: [
     CommonModule,
