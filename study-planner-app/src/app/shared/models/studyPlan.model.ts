@@ -1,12 +1,13 @@
 export type Category = 'thesis' | 'general_competence' | 'technological_specialisation' |'elective';
 
-export type TermPlacement = 'spring' | 'fall';
+export type TermPlacement = 'spring' | 'fall' | 'january' | 'june' | 'july' | 'august' | 'thesis';
 
 export interface Course {
   id: string;
   name: string;
   module: string;
   category: Category;
+  placement: TermPlacement[];
   points: number;
 }
 
