@@ -11,11 +11,11 @@ export class PlannerService {
   constructor() { }
 
   public getBookmarks(): Observable<Course[]> {
-    return of(courses).pipe(delay(2000));
+    return of(courses).pipe(delay(200));
   }
 
   public getStudyPlan(): Observable<AcademicYear[]> {
-    return of(plan).pipe(delay(1500));
+    return of(plan).pipe(delay(500));
   }
 }
 
