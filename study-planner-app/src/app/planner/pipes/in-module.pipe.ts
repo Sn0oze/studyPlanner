@@ -7,7 +7,7 @@ import {Course, TermPlacement} from '../../shared/models';
 })
 export class InModulePipe implements PipeTransform {
 
-  transform(course: Course, module: string, placement: TermPlacement): boolean {
-    return course.module === module && course.placement.includes(placement);
+  transform(course: Course | null, module: string, placement: TermPlacement): boolean {
+    return course?.module === module && course.placement.includes(placement);
   }
 }
