@@ -53,21 +53,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // Course List
 
 $drop-list-transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+$drop-list-line-color: #ccc;
 $course-item-height: 40px;
 .course-list {
   width: 100%;
-  border: solid 1px #ccc;
+  border: solid 1px $drop-list-line-color;
   min-height: $course-item-height;
-  background: white;
   border-radius: 4px;
   overflow: hidden;
   &:empty{
-    border: 4px dotted rgba(0,0,0,.87);
+    border-style: dashed;
     position: relative;
     border-radius: 0;
     &:after{
-      content: 'Drop course to add';
-      font-weight: bold;
+      color: $drop-list-line-color;
+      content: 'No registrations';
       position: absolute;
       top: 0;
       left: 0;
