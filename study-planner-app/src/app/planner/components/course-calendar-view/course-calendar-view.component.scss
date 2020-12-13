@@ -1,5 +1,5 @@
 $card-background-color: white;
-$cell-background-color: #eaeaea;
+$cell-background-color: #d0d0d0;
 $cell-border-color: $card-background-color;
 $cell-border-width: 2px;
 $cell-border-radius: 4px;
@@ -39,7 +39,7 @@ $grid-line-color: $card-background-color;
       padding: 0;
       border-radius: $cell-border-radius;
       &.valid-target{
-        background-color: #ffd89d;
+        background-color: #ff9800;
       }
     }
   }
@@ -47,8 +47,9 @@ $grid-line-color: $card-background-color;
 
 .module-marker{
   display: inline-block;
-  border-right: 1px solid rgba(0,0,0.87);
-  border-bottom: 1px solid rgba(0,0,0.87);
+  background-color: white;
+  // border-right: 1px solid rgba(0,0,0.87);
+  // border-bottom: 1px solid rgba(0,0,0.87);
   border-radius: $cell-border-radius 0 $cell-border-radius 0;
   font-size: 75%;
   min-width: 1.25rem;
@@ -58,14 +59,24 @@ $grid-line-color: $card-background-color;
 }
 
 .course-badge{
-  border-radius: 4px;
-  padding: 0 .25rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: $cell-border-radius;
+  background-color: $card-background-color;
+  padding: 0 .25rem 0 0;
   margin: .125rem;
   font-size: 80%;
-  background-color: #cccccc;
+  // background-color: #cccccc;
   &:not(:first-child) {
     margin-top: 0;
   }
   color: $header-font-color;
   font-weight: bold;
+}
+.course-badge-marker{
+  display: inline-block;
+  width: 6px;
+  border-radius: $cell-border-radius 0 0 $cell-border-radius;
+  height: 100%;
+  margin-right: .25rem;
 }

@@ -19,8 +19,10 @@
           <div class="h-100 w-100 d-flex flex-column align-items-end">
             <span
               *ngFor="let course of courseMap.get(module)"
-              [style.background-color]="course.category | categoryColor"
-              class="course-badge">{{course.id}}</span>
+              class="course-badge mat-elevation-z1">
+              <span [style.background-color]="course.category | categoryColor" class="course-badge-marker"></span>
+              <span>{{course.id}}</span>
+            </span>
           </div>
         </div>
       </td>
