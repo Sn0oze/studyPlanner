@@ -1,5 +1,7 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Course, ModuleRow, TermPlacement} from '../../../shared/models';
+import {SubSink} from '../../../shared/utils';
+import {PlannerContext} from '../../planner.context';
 
 @Component({
   selector: 'app-course-calendar-view',
@@ -7,16 +9,25 @@ import {Course, ModuleRow, TermPlacement} from '../../../shared/models';
   styleUrls: ['./course-calendar-view.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseCalendarViewComponent implements OnInit {
+export class CourseCalendarViewComponent implements OnInit, OnDestroy {
   @Input() courses: Course[];
   @Input() placement: TermPlacement;
   public header = weekDays;
   public rows = moduleRows;
   public courseMap = new Map<string, Course[]>();
+  public draggedCourse: Course;
+  private subs = new SubSink();
 
-  constructor() { }
+  constructor(
+    private plannerContext: PlannerContext,
+    private changeDetectorRef: ChangeDetectorRef
+  ) { }
 
   ngOnInit(): void {
+    this.subs.add(this.plannerContext.getDragSelection().subscribe(course => {
+      this.draggedCourse = course;
+      this.changeDetectorRef.markForCheck();
+    }));
     this.courses.forEach(course => {
       const module = course.module;
       if (this.courseMap.has(module)) {
@@ -25,10 +36,11 @@ export class CourseCalendarViewComponent implements OnInit {
         this.courseMap.set(module, [course]);
       }
     });
-    console.log(this.courseMap, this.courses.length);
-    console.log(this.courseMap.get('F4'));
   }
 
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
+  }
 }
 
 const weekDays = [

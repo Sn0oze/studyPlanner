@@ -2,12 +2,14 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Course, AcademicYear} from '../shared/models';
 import {PlannerService} from '../shared/services/planner.service';
 import {Observable} from 'rxjs';
+import {PlannerContext} from './planner.context';
 
 
 @Component({
   selector: 'app-planner',
   templateUrl: './planner.component.html',
   styleUrls: ['./planner.component.scss'],
+  providers: [PlannerContext],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PlannerComponent implements OnInit {
@@ -15,9 +17,7 @@ export class PlannerComponent implements OnInit {
   public bookmarks: Observable<Course[]>;
   public currentTerm = 3;
 
-  constructor(
-    private planner: PlannerService
-  ) { }
+  constructor(private planner: PlannerService) { }
 
   ngOnInit(): void {
     this.studyPlan = this.planner.getStudyPlan();

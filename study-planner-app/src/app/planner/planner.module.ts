@@ -18,7 +18,7 @@ import {CourseCalendarViewComponent} from './components/course-calendar-view/cou
 import {ActiveYearPipe} from './pipes/active-year.pipe';
 import {PointTotalPipe} from './pipes/point-total.pipe';
 import {CourseItemComponent} from './components/course-list-view/course-item/course-item.component';
-import { TermComponent } from './components/term/term.component';
+import {TermComponent} from './components/term/term.component';
 
 
 @NgModule({
@@ -44,7 +44,8 @@ import { TermComponent } from './components/term/term.component';
     MatCardModule,
     DragDropModule,
     MatTooltipModule
-  ]
+  ],
+  providers: []
 })
 export class PlannerModule {
 }

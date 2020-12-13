@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {Course} from '../../../shared/models';
 import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import {PlannerContext} from '../../planner.context';
 
 @Component({
   selector: 'app-course-list-view',
@@ -13,7 +14,7 @@ export class CourseListViewComponent implements OnInit {
   @Input() dropDisabled: boolean;
   public canDrop = (drag: CdkDrag<Course>, drop: CdkDropList<Course[]>): boolean => !drop.disabled;
 
-  constructor() { }
+  constructor(private plannerContext: PlannerContext) { }
 
   ngOnInit(): void {
   }
@@ -27,5 +28,9 @@ export class CourseListViewComponent implements OnInit {
         event.previousIndex,
         event.currentIndex);
     }
+  }
+
+  public notifyDragSelection(course: Course): void {
+    this.plannerContext.updateDragSelection(course);
   }
 }
