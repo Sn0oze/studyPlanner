@@ -12,6 +12,7 @@ import {PlannerContext} from '../../planner.context';
 export class CourseCalendarViewComponent implements OnInit, OnDestroy {
   @Input() courses: Course[];
   @Input() placement: TermPlacement;
+  @Input() dropDisabled: boolean;
   public header = weekDays;
   public rows = moduleRows;
   public courseMap = new Map<string, Course[]>();

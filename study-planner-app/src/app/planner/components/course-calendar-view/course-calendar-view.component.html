@@ -9,7 +9,9 @@
       <td class="text-right pr-3">
         <app-timeslot [timeslot]="row.timeSlot"></app-timeslot>
       </td>
-      <td *ngFor="let module of row.modules" [ngClass]="{'valid-target': draggedCourse | inModule:module:placement}">
+      <td
+        *ngFor="let module of row.modules"
+        [ngClass]="{'valid-target': !dropDisabled && draggedCourse | inModule:module:placement}">
         <div class="d-flex h-100" *ngIf="module">
           <div class="h-100 d-flex align-items-start">
             <span class="module-marker small">{{module | module: placement}}</span>

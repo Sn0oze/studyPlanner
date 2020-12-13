@@ -30,5 +30,6 @@
 <ng-template #calendarView>
   <app-course-calendar-view
     [courses]="term.courses"
-    [placement]="term.placement"></app-course-calendar-view>
+    [placement]="term.placement"
+    [dropDisabled]="isLocked"></app-course-calendar-view>
 </ng-template>
