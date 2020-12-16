@@ -59,6 +59,7 @@ $grid-line-color: $card-background-color;
 }
 
 .course-badge{
+  user-select: none;
   display: inline-flex;
   align-items: center;
   border-radius: $cell-border-radius;
