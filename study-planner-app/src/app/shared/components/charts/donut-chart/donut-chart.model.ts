@@ -1,6 +1,6 @@
-export interface DonutChartData {
-  total: number;
-  value: number;
+export interface DonutChartDatum {
   label: string;
   color: string;
+  total: number;
+  current: number;
 }

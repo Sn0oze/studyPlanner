@@ -171,3 +171,27 @@ button{
     outline: none !important;
   }
 }
+
+// chart
+
+path.slice{
+  // stroke-width:2px;
+}
+
+.donut-arc{
+  // stroke: white;
+  // stroke-width: 2px;
+}
+
+.current-slices{}
+.total-slices{
+  border-radius: 4px;
+}
+
+polyline{
+  opacity: .3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+  pointer-events: none;
+}

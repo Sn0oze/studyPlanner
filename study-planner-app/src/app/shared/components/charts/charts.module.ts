@@ -5,11 +5,14 @@ import {DonutChartComponent} from './donut-chart/donut-chart.component';
 
 
 @NgModule({
-  declarations: [
-    DonutChartComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        DonutChartComponent
+    ],
+    exports: [
+        DonutChartComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class ChartsModule { }
