@@ -1,4 +1,6 @@
-<div class="p-1 mb-3 p-2 rounded group-card" [ngClass]="{'active' : year | activeYear: currentTerm}">
+<div
+  class="mb-3 p-2 rounded group-card"
+  [ngClass]="{'active mat-elevation-z8' : year | activeYear: currentTerm}">
   <h1 class="d-flex justify-content-between align-items-center">
     <span>{{year.year}}</span>
     <span class="points-count font-weight-bold">{{year | pointTotal}}</span>

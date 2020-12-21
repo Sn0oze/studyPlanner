@@ -1,4 +1,5 @@
 @use "variables";
+$side-margin: 1rem;
 
 :host{
   display: block;
@@ -8,6 +9,10 @@
   background-color: lighten(variables.$bg-light, 10%);
   &.active{
     background-color: variables.$bg-light;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.87);
+    // box-shadow: 0 0 0 1px rgba(0,0,0,.87);
+  }
+  &:not(.active){
+    margin-left: $side-margin;
+    margin-right: $side-margin;
   }
 }
