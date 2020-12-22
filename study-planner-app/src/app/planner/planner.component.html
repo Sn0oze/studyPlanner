@@ -21,7 +21,10 @@
 <div class="container" cdkDropListGroup>
   <div class="row">
     <div class="col-md-7 pt-1 mt-2">
-      <app-academic-year *ngFor="let group of studyPlan | async" [year]="group" [currentTerm]="currentTerm"></app-academic-year>
+      <app-academic-year
+        *ngFor="let group of studyPlan | async"
+        [year]="group"
+        [currentTerm]="currentTerm"></app-academic-year>
     </div>
     <div class="col-md-5">
       <div class="position-sticky" style="top: 148px">
