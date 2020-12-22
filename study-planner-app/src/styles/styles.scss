@@ -103,7 +103,7 @@ $course-item-height: 40px;
 
 .category-marker{
   display: inline-block;
-  width: 6px;
+  width: $category-marker-width;
   height: calc(#{$course-item-height} - 1px);
   background-color: #313131;
   margin-right: .25rem;

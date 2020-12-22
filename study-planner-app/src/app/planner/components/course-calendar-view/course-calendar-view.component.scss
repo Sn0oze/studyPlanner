@@ -1,3 +1,5 @@
+@use 'variables';
+
 $card-background-color: white;
 $cell-background-color: #d0d0d0;
 $cell-border-color: $card-background-color;
@@ -76,7 +78,7 @@ $grid-line-color: $card-background-color;
 }
 .course-badge-marker{
   display: inline-block;
-  width: 6px;
+  width: variables.$category-marker-width;
   border-radius: $cell-border-radius 0 0 $cell-border-radius;
   height: 100%;
   margin-right: .25rem;
