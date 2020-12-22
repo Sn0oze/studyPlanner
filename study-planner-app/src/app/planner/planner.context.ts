@@ -12,6 +12,10 @@ export class PlannerContext {
     return this.dragSelection.asObservable();
   }
 
+  public getDragSelectionSnapshot(): Course {
+    return this.dragSelection.value;
+  }
+
   public updateDragSelection(course: Course): void {
     this.dragSelection.next(course);
   }

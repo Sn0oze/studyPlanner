@@ -51,6 +51,14 @@ const courses = [
     placement: ['fall'],
     category: 'elective',
     points: 7.5
+  },
+  {
+    id: '04455',
+    name: 'Graph Theory',
+    module: '1A',
+    placement: ['spring'],
+    category: 'elective',
+    points: 5
   }
 ] as Course[];
 
