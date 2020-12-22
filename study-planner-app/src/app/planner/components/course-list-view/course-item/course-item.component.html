@@ -1,5 +1,15 @@
-<div class="course-item" cdkDrag>
-  <span class="category-marker"></span>
-  <strong>{{course.id}}</strong>
-  <span class="ml-2">{{course.name}}</span>
+<div
+  class="course-item"
+  cdkDrag
+  (cdkDragReleased)="notifyDragSelection(null)"
+  (cdkDragStarted)="notifyDragSelection(course)">
+  <span class="d-flex align-items-center text-truncate">
+    <span class="category-marker" [style.background-color]="course.category | categoryColor"></span>
+    <strong>{{course.id}}</strong>
+    <span class="ml-2 text-truncate">{{course.name}}</span>
+  </span>
+  <span>
+    <span class="info-column mr-2">{{course.module}}</span>
+    <span class="info-column">{{course.points}}</span>
+  </span>
 </div>

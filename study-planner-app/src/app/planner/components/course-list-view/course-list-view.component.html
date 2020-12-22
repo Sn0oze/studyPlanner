@@ -5,14 +5,5 @@
   [cdkDropListEnterPredicate]="canDrop"
   (cdkDropListDropped)="drop($event)"
   [cdkDropListData]="courses">
-  <div
-    class="course-item"
-    cdkDrag
-    *ngFor="let course of courses"
-    (cdkDragReleased)="notifyDragSelection(null)"
-    (cdkDragStarted)="notifyDragSelection(course)">
-    <span class="category-marker" [style.background-color]="course.category | categoryColor"></span>
-    <strong>{{course.id}}</strong>
-    <span class="ml-2">{{course.name}}</span>
-  </div>
+  <app-course-item *ngFor="let course of courses" [course]="course"></app-course-item>
 </div>

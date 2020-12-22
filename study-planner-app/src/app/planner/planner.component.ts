@@ -15,7 +15,7 @@ import {PlannerContext} from './planner.context';
 export class PlannerComponent implements OnInit {
   public studyPlan: Observable<AcademicYear[]>;
   public bookmarks: Observable<Course[]>;
-  public currentTerm = 3;
+  public currentTerm = 2;
 
   constructor(private planner: PlannerService) { }
 

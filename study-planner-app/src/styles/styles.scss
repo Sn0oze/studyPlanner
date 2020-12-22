@@ -87,6 +87,7 @@ $course-item-height: 40px;
   color: rgba(0, 0, 0, 0.87);
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   background: white;
@@ -129,8 +130,10 @@ $course-item-height: 40px;
   transition: $drop-list-transition;
 }
 
-.course-item:last-child {
-  border: none;
+app-course-item:last-child{
+  .course-item {
+    border: none;
+  }
 }
 
 .course-list.cdk-drop-list-dragging .course-item:not(.cdk-drag-placeholder) {
@@ -150,6 +153,13 @@ $course-item-height: 40px;
 
 .points-count{
   @extend .text-value;
+  &:after{
+    content: ' ECTS';
+    @extend .text-label
+  }
+}
+
+.course-points{
   &:after{
     content: ' ECTS';
     @extend .text-label
