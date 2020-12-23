@@ -1,6 +1,7 @@
 <div
   class="course-list"
   cdkDropList
+  [ngClass]="{'valid-target': placement && draggedCourse}"
   [cdkDropListDisabled]="dropDisabled"
   [cdkDropListEnterPredicate]="canDrop"
   (cdkDropListDropped)="drop($event)"

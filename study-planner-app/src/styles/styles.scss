@@ -35,8 +35,8 @@ $study-planner-app-theme: mat-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-@import "colors";
-@import "variables";
+@import 'colors';
+@import 'variables';
 
 //html, body { height: 100%; }
 html { overflow-y: scroll; }
@@ -61,6 +61,10 @@ $course-item-height: 40px;
   min-height: $course-item-height;
   border-radius: 4px;
   overflow: hidden;
+  &.valid-target{
+    border-color: $valid-target-highlight;
+    box-shadow: 0 0 0 1px $valid-target-highlight;
+  }
   &:empty{
     border-style: dashed;
     position: relative;

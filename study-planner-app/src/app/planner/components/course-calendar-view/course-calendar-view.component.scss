@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'colors';
 
 $card-background-color: white;
 $cell-background-color: #d0d0d0;
@@ -41,7 +42,7 @@ $grid-line-color: $card-background-color;
       padding: 0;
       border-radius: $cell-border-radius;
       &.valid-target{
-        background-color: #ff9800;
+        background-color: colors.$valid-target-highlight;
       }
     }
   }
