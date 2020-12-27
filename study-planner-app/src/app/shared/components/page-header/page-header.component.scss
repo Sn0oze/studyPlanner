@@ -6,7 +6,8 @@
   // background-color: #1b5872;
   background-color: white;
   background-size: contain;
-  // background-image: url("/assets/images/background.svg");
+  background-image: url(/assets/images/background-image.png);
+  image-rendering: crisp-edges;
   background-repeat: no-repeat;
   background-position: right;
 }
