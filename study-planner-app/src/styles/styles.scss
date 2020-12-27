@@ -186,6 +186,17 @@ button{
   }
 }
 
+.inline-icon-btn{
+  padding: 0 .125rem !important;
+  mat-icon{
+    margin-right: .5rem;
+  }
+  span{
+    display: inline-block;
+    margin-right: .25rem;
+  }
+}
+
 // chart
 
 path.slice{
@@ -197,9 +208,11 @@ path.slice{
   // stroke-width: 2px;
 }
 
-.current-slices{}
+.current-slices{
+
+}
 .total-slices{
-  border-radius: 4px;
+  // border-radius: 4px;
 }
 
 polyline{
