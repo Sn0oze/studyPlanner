@@ -51,9 +51,9 @@ export class DonutChart {
 
     this.arc = d3.arc()
       .outerRadius(this.radius * .8)
-      .innerRadius(this.radius * .6)
-      .cornerRadius(2)
-      .padAngle(.1);
+      .innerRadius(this.radius * .5)
+      .cornerRadius(0)
+      .padAngle(.075);
 
     this.outerArc = d3.arc()
       .innerRadius(this.radius * 0.5)
