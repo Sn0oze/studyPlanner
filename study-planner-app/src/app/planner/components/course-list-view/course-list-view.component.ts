@@ -24,10 +24,13 @@ export class CourseListViewComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.subs.add(this.plannerContext.getDragSelection().subscribe(course => {
-      this.draggedCourse = course?.placement.includes(this.placement) ? course : null;
-      this.changeDetectorRef.markForCheck();
-    }));
+    // TODO only subscribe white term is open
+    if (!this.dropDisabled) {
+      this.subs.add(this.plannerContext.getDragSelection().subscribe(course => {
+        this.draggedCourse = course?.placement.includes(this.placement) ? course : null;
+        this.changeDetectorRef.markForCheck();
+      }));
+    }
   }
 
   ngOnDestroy(): void {

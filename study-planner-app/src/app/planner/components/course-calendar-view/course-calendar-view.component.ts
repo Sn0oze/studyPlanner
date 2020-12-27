@@ -25,10 +25,12 @@ export class CourseCalendarViewComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.subs.add(this.plannerContext.getDragSelection().subscribe(course => {
-      this.draggedCourse = course?.placement.includes(this.placement) ? course : null;
-      this.changeDetectorRef.markForCheck();
-    }));
+    if (!this.dropDisabled) {
+      this.subs.add(this.plannerContext.getDragSelection().subscribe(course => {
+        this.draggedCourse = course?.placement.includes(this.placement) ? course : null;
+        this.changeDetectorRef.markForCheck();
+      }));
+    }
     this.courses.forEach(course => {
       const module = course.module;
       if (this.courseMap.has(module)) {
