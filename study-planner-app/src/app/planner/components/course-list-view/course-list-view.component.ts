@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy,
 import {Course, TermPlacement} from '../../../shared/models';
 import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import {PlannerContext} from '../../planner.context';
-import {SubSink} from '../../../shared/utils';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-course-list-view',
@@ -12,10 +12,24 @@ import {SubSink} from '../../../shared/utils';
 })
 export class CourseListViewComponent implements OnInit, OnDestroy {
   @Input() courses: Course[];
-  @Input() dropDisabled: boolean;
   @Input() placement: TermPlacement;
+  @Input() set dropDisabled(disabled: boolean) {
+    this.isDisabled = disabled;
+    if (this.isDisabled) {
+      this.subs?.unsubscribe();
+    } else {
+      this.subs = this.plannerContext.getDragSelection().subscribe(course => {
+        this.draggedCourse = course?.placement.includes(this.placement) ? course : null;
+        this.changeDetectorRef.markForCheck();
+      });
+    }
+  }
+  get dropDisabled(): boolean {
+    return this.isDisabled;
+  }
+  private isDisabled: boolean;
   public draggedCourse: Course;
-  private subs = new SubSink();
+  private subs: Subscription;
 
 
   constructor(
@@ -23,16 +37,7 @@ export class CourseListViewComponent implements OnInit, OnDestroy {
     private changeDetectorRef: ChangeDetectorRef
   ) { }
 
-  ngOnInit(): void {
-    // TODO only subscribe white term is open
-    if (!this.dropDisabled) {
-      this.subs.add(this.plannerContext.getDragSelection().subscribe(course => {
-        this.draggedCourse = course?.placement.includes(this.placement) ? course : null;
-        this.changeDetectorRef.markForCheck();
-        console.log('updating valid for');
-      }));
-    }
-  }
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();

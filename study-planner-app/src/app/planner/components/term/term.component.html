@@ -1,4 +1,5 @@
-<mat-expansion-panel class="mt-2" [expanded]="!isLocked || isCurrent">
+<p>{{panel.expanded}}</p>
+<mat-expansion-panel class="mt-2" [expanded]="!isLocked || isCurrent" #panel>
   <mat-expansion-panel-header [expandedHeight]="'2.25rem'" [collapsedHeight]="'2.25rem'">
     <mat-panel-title class="d-flex align-items-end">
       <div class="d-flex align-items-end">
@@ -25,12 +26,12 @@
   <app-course-list-view
     [courses]="term.courses"
     [placement]="term.placement"
-    [dropDisabled]="isLocked"></app-course-list-view>
+    [dropDisabled]="isLocked || !panel.expanded"></app-course-list-view>
 </ng-template>
 
 <ng-template #calendarView>
   <app-course-calendar-view
     [courses]="term.courses"
     [placement]="term.placement"
-    [dropDisabled]="isLocked"></app-course-calendar-view>
+    [dropDisabled]="isLocked || !panel.expanded"></app-course-calendar-view>
 </ng-template>
