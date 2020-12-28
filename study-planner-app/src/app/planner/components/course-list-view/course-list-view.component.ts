@@ -16,9 +16,9 @@ export class CourseListViewComponent implements OnInit, OnDestroy {
   @Input() set dropDisabled(disabled: boolean) {
     this.isDisabled = disabled;
     if (this.isDisabled) {
-      this.subs?.unsubscribe();
+      this.subscription?.unsubscribe();
     } else {
-      this.subs = this.plannerContext.getDragSelection().subscribe(course => {
+      this.subscription = this.plannerContext.getDragSelection().subscribe(course => {
         this.draggedCourse = course?.placement.includes(this.placement) ? course : null;
         this.changeDetectorRef.markForCheck();
       });
@@ -29,7 +29,7 @@ export class CourseListViewComponent implements OnInit, OnDestroy {
   }
   private isDisabled: boolean;
   public draggedCourse: Course;
-  private subs: Subscription;
+  private subscription: Subscription;
 
 
   constructor(
@@ -40,7 +40,7 @@ export class CourseListViewComponent implements OnInit, OnDestroy {
   ngOnInit(): void {}
 
   ngOnDestroy(): void {
-    this.subs.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
   public canDrop = (drag: CdkDrag<Course>, drop: CdkDropList<Course[]>): boolean => (
