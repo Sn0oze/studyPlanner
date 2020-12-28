@@ -20,6 +20,7 @@ import {PointTotalPipe} from './pipes/point-total.pipe';
 import {CourseItemComponent} from './components/course-list-view/course-item/course-item.component';
 import {TermComponent} from './components/term/term.component';
 import { InModulePipe } from './pipes/in-module.pipe';
+import { CourseBasketComponent } from './components/course-basket/course-basket.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { InModulePipe } from './pipes/in-module.pipe';
     PointTotalPipe,
     CourseItemComponent,
     TermComponent,
-    InModulePipe
+    InModulePipe,
+    CourseBasketComponent
   ],
   imports: [
     CommonModule,
