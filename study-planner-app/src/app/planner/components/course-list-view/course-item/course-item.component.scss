@@ -5,7 +5,14 @@
 .info-column{
   display: inline-block;
   text-align: right;
-  min-width: 20px;
+}
+
+.points{
+  min-width: 3.5ch;
+}
+
+.module{
+  min-width: 2ch;
 }
 
 .placements{
@@ -15,6 +22,5 @@
     &:before {
       content: ' ,';
     }
-    margin-right: .25rem;
   }
 }

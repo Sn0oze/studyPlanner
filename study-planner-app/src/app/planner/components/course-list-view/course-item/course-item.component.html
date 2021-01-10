@@ -9,8 +9,12 @@
     <span class="ml-2 text-truncate">{{course.name}}</span>
   </span>
   <span>
-    <span *ngFor="let placement of course.placement" class="placements">{{placement.charAt(0)}}</span>
-    <span class="info-column mr-2">{{course.module}}</span>
-    <span class="info-column">{{course.points}}</span>
+    <span
+      *ngFor="let placement of course.placement"
+      class="placements">
+      {{placement.charAt(0)}}
+    </span>
+    <span class="info-column module mx-1">{{course.module}}</span>
+    <span class="info-column points">{{course.points}}</span>
   </span>
 </div>
