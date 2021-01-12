@@ -40,7 +40,7 @@ export class CourseListViewComponent implements OnInit, OnDestroy {
   ngOnInit(): void {}
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.subscription?.unsubscribe();
   }
 
   public canDrop = (drag: CdkDrag<Course>, drop: CdkDropList<Course[]>): boolean => (
